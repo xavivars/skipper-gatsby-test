@@ -1,0 +1,7 @@
+zalonful: PathSubtree("/clp/:clpSlug")
+  -> setPath("/de-DE/${clpSlug}/index.html")
+  -> "https://kitt-zalonful-test.s3.eu-central-1.amazonaws.com";
+
+zalonfulAssets: Path("/zalonful/*asset")
+  -> setPath("${asset}")
+  -> "https://kitt-zalonful-test.s3.eu-central-1.amazonaws.com";
