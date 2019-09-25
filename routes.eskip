@@ -1,7 +1,15 @@
 zalonful: PathSubtree("/clp/:clpSlug")
-  -> setPath("/de-DE/${clpSlug}/index.html")
-  -> "https://kitt-zalonful-test.s3.eu-central-1.amazonaws.com";
+  -> setPath("/${clpSlug}/")
+  -> "https://fervent-lovelace-aaa46a.netlify.com";
 
 zalonfulAssets: Path("/zalonful/*asset")
   -> setPath("${asset}")
-  -> "https://kitt-zalonful-test.s3.eu-central-1.amazonaws.com";
+  -> "https://fervent-lovelace-aaa46a.netlify.com/";
+
+index: Path("/")
+  -> setPath("/notworking/index.html")
+  -> "http://gatsby-bug.s3-website-eu-west-1.amazonaws.com/";
+
+two: Path("/two")
+  -> setPath("/notworking/page-2/index.html")
+  -> "http://gatsby-bug.s3-website-eu-west-1.amazonaws.com/";
